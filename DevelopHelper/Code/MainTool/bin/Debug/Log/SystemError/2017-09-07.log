@@ -1,0 +1,1181 @@
+2017-09-07 16:17:00,020 [T:17] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp303_gzhj_auto_snapshot"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:f61b39aa-c30e-4ddd-afb7-344ebe0832d5
+Error Number:4060,State:1,Class:11
+2017-09-07 16:17:23,939 [T:29] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:0eeab5ff-bcb6-4f5c-ae51-d82a62683a71
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:24,543 [T:30] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:5f1b8779-b4e5-4137-aad5-271ca13e37bf
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:25,213 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:577d9ca0-9f2f-41b1-8cab-d2cfdda8557a
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:25,534 [T:31] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:cdda8097-4cc0-4777-bb97-2e60b818555f
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:25,955 [T:18] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:96dc85f0-0d54-4594-befd-24e0b786b885
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:26,482 [T:32] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3b8dee61-7955-496e-af90-b1a18a7a4d63
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:26,787 [T:11] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3f377c28-dfbc-467b-8d9e-ba2e7f7703f9
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:27,512 [T:7] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:0fd015f9-84ee-40e7-b0bd-3bc821122f2c
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:27,519 [T:33] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:0edf982c-3b86-4d67-93a6-b0cbb5e166cb
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:28,448 [T:19] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:f60394bd-fdc9-4756-ac70-2e2dfdc6acb1
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:28,982 [T:34] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:26b9b187-c49b-4cca-925c-33a4b495ae57
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:29,398 [T:12] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:d91ffe97-3d95-4ef2-bce6-16b762f5126c
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:29,946 [T:20] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:88c77be6-3710-482a-ac47-4a20a9cf58be
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:30,128 [T:17] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:c90aa3eb-0f01-42f3-a294-c6be7c251f37
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:30,480 [T:36] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:87455b19-ad33-4b47-9343-0bbc31f5eba0
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:30,534 [T:21] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:4c351ac5-5452-4252-89e8-e7da91fa9e23
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:31,522 [T:37] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TrySetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:b18744f7-b6b6-4ac6-94f4-a9f3852c8451
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:31,542 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:635c103a-fb66-4c87-a878-9b9270eb7f1c
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:32,356 [T:13] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:df46266c-ca6e-4595-9f16-0db800661b79
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:32,626 [T:38] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:9b08db27-4858-4e86-adc9-16aa034d8a3a
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:33,169 [T:22] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:a93f44fa-927d-49eb-89ff-951a29eef697
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:33,980 [T:39] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:5a286a00-be8f-41cf-ac5d-0243490d4107
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:34,199 [T:14] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:05c3e7a9-96d1-44bf-b2d9-7933dff5dc9e
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:34,981 [T:40] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:ad4cfe43-e047-4a7c-92a8-141f2e935dc2
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:35,196 [T:23] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:950f76ad-119a-4246-b46f-ff5cfcf88de2
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:35,981 [T:41] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:5ac3b18c-c590-4556-955d-47ead03923be
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:36,636 [T:4] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:e4d8dd68-c99f-4b7f-b822-84b844b137b0
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:36,984 [T:43] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:0b6c5c61-33d1-4138-82f1-bac4934da2cd
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:37,592 [T:24] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:e103e702-0b00-4204-ada3-6bbd10c01184
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:38,224 [T:15] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:590d4e68-8ad3-4117-9008-2986c35dcbc3
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:38,480 [T:44] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:8a08c67a-b533-43f3-a2cf-986a6a2e9db2
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:42,481 [T:6] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:33df9d0e-cc3d-4878-8531-71d1fb30b9da
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:42,983 [T:48] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:d70e3a4f-f4a1-4970-b416-6f2f8a67f80a
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:43,982 [T:49] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:cf2e3b6e-595f-4c4f-a352-ab824ecfce6d
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:48,984 [T:53] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TrySetMetaData(_SqlMetaDataSet metaData, Boolean moreInfo)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:6a243f72-4458-46aa-9ceb-9599932e381e
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:50,072 [T:9] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:674bcb01-170a-49d3-aa8c-e94b958c65a3
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:50,245 [T:28] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:280c9cdf-97e1-4a46-9f1b-6a9a27ea42ee
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:51,415 [T:10] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:09f9faa0-ead6-4529-bf0f-0cd649c1ac05
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:51,984 [T:55] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:7e546df6-9ce3-4358-8209-4c27b4ac78f2
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:54,484 [T:57] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:26185759-97ee-4830-bb68-9e2799d9a038
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:55,275 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:caf8c66e-dda0-45b0-9a10-354379310afe
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:55,547 [T:31] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:7f52a609-b4c2-4b96-8d6e-b1928b8dea4f
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:55,968 [T:18] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:2ab0f2dc-2020-46a0-ba6c-435e7fa9132d
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:56,484 [T:59] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:0f5ddef5-0b0c-4d17-aa36-8105e4141fd8
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:56,493 [T:32] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:ae08570e-509e-4055-bc1b-2e8116c29ffd
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:56,808 [T:11] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:52310d00-27d1-4b57-9b36-aed91a73543f
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:57,485 [T:42] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:f6faac2a-77ce-4d39-bfa4-39e1dade821e
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:57,525 [T:7] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:cc00e264-835d-4c56-8866-48792cec1ddf
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:57,530 [T:33] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:9ec85dac-85c5-4e64-acee-deb0897e9e86
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:58,481 [T:60] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3a0667ab-d5a5-4a08-a3fd-eb63ca742a02
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:58,994 [T:34] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:4eb9f234-43f6-40cb-b9e1-43f8890ebe79
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:59,413 [T:12] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:4b0e7da4-0ee9-493d-81cb-b3d7a74d87d0
+Error Number:-2,State:0,Class:11
+2017-09-07 16:17:59,960 [T:20] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:d3152a89-54cd-44ee-9277-666a97542e11
+Error Number:-2,State:0,Class:11
+2017-09-07 16:18:00,138 [T:17] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:e65d5d35-4b07-46ae-be6f-1d00b248a465
+Error Number:-2,State:0,Class:11
+2017-09-07 16:18:00,552 [T:21] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:1d851e38-d38d-49c3-93ea-fb6ee3ea0fa6
+Error Number:-2,State:0,Class:11

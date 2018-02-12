@@ -1,0 +1,12 @@
+2017-02-27 12:52:21,156 [T:1] [L:ERROR] [C:LogWriter.Error] [P:d:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - BACKUP DATABASE [dotnet_erp352] TO DISK = '\\Wh-xiaoy03\共享文件夹\352测试库\2017-02-27 租售打通体验站点备份\dotnet_erp352.bak'
+System.Data.SqlClient.SqlException (0x80131904): 由于文件不可访问，或者内存或磁盘空间不足，所以无法打开数据库 'dotnet_erp352'。有关详细信息，请参阅 SQL Server 错误日志。
+BACKUP DATABASE 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 d:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:c34da512-d733-409b-80d4-127b8732eec3

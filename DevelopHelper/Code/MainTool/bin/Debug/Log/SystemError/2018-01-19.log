@@ -1,0 +1,12 @@
+2018-01-19 10:58:10,005 [T:59] [L:ERROR] [C:LogWriter.Error] [P:E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - BACKUP DATABASE [erp258_beijing_bjjrj_KH] TO DISK = '\\Xiaoyong\共享文件夹\导数工具\北京金融街258\erp258_beijing_bjjrj_KH.bak'
+System.Data.SqlClient.SqlException (0x80131904): 执行超时已过期。完成操作之前已超时或服务器未响应。  ---> System.ComponentModel.Win32Exception (0x80004005): 等待的操作过时。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:c6536a61-e534-4b93-afb6-fe8bae8ff53c
+Error Number:-2,State:0,Class:11

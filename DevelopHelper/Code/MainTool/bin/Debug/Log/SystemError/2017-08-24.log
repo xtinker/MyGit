@@ -1,0 +1,11 @@
+2017-08-24 15:31:47,493 [T:1] [L:ERROR] [C:LogService.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.xmlToJson(String xml) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 109

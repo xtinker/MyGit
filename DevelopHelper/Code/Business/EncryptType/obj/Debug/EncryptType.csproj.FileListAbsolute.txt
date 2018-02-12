@@ -1,0 +1,5 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\EncryptType\bin\Debug\EncryptType.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\EncryptType\bin\Debug\EncryptType.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\EncryptType\obj\Debug\EncryptType.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\EncryptType\obj\Debug\EncryptType.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\EncryptType\obj\Debug\EncryptType.csprojResolveAssemblyReference.cache

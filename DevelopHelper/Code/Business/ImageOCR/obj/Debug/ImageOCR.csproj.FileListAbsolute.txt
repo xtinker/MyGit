@@ -1,0 +1,5 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\ImageOCR\bin\Debug\ImageOCR.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\ImageOCR\bin\Debug\ImageOCR.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\ImageOCR\obj\Debug\ImageOCR.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\ImageOCR\obj\Debug\ImageOCR.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Business\ImageOCR\obj\Debug\ImageOCR.csprojResolveAssemblyReference.cache

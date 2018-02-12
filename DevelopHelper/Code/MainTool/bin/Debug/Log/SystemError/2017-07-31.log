@@ -1,0 +1,1218 @@
+2017-07-31 10:34:41,586 [T:12] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:672129e6-40c1-497d-9fa9-1215bfbaaf63
+Error Number:4060,State:1,Class:11
+2017-07-31 10:34:46,828 [T:11] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3edde127-7fea-4bb4-bc1f-c6283109773d
+Error Number:4060,State:1,Class:11
+2017-07-31 10:40:26,306 [T:11] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:9c654073-7e29-4c7a-b5a2-8ce7768b5cb3
+Error Number:4060,State:1,Class:11
+2017-07-31 10:40:29,382 [T:9] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:34e13e43-9679-4966-a046-dffa2e0c64bc
+Error Number:4060,State:1,Class:11
+2017-07-31 10:45:50,648 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:686c351f-6ac2-49c3-83d0-56618c3185a5
+Error Number:4060,State:1,Class:11
+2017-07-31 10:45:51,732 [T:7] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:638abea3-807a-4f0a-8377-ef67053aa2b1
+Error Number:4060,State:1,Class:11
+2017-07-31 11:11:15,941 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:c592b049-e406-4dfb-89a6-93b3e0668bc4
+Error Number:4060,State:1,Class:11
+2017-07-31 11:11:17,343 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:9fdb825f-4bbe-41d4-b893-ac57d33cca22
+Error Number:4060,State:1,Class:11
+2017-07-31 11:15:47,911 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:c2380f5f-8413-4c29-b3e1-b4e62d851b57
+Error Number:4060,State:1,Class:11
+2017-07-31 11:15:49,647 [T:7] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:e644fea2-6d8b-4269-accc-7820b3da9f82
+Error Number:4060,State:1,Class:11
+2017-07-31 11:23:16,328 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3092912b-c905-4ebc-9c45-277acc3f99bf
+Error Number:4060,State:1,Class:11
+2017-07-31 11:23:17,035 [T:8] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:a2d57db9-953a-4928-bd7e-3a29e07f6cb3
+Error Number:4060,State:1,Class:11
+2017-07-31 11:23:50,913 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT COUNT(1) AS DtSourceCount FROM Order 
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'Order' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:a893622b-8144-494d-8c75-b1c387b4e9da
+Error Number:156,State:1,Class:15
+2017-07-31 11:23:50,922 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT TOP 3000 * FROM Order 
+System.Data.SqlClient.SqlException (0x80131904): 关键字 'Order' 附近有语法错误。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:a893622b-8144-494d-8c75-b1c387b4e9da
+Error Number:156,State:1,Class:15
+2017-07-31 11:28:56,493 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "dotnet_erp304_jh_big"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3e18ee16-c94b-43d5-b4eb-20a7ddc54b6a
+Error Number:4060,State:1,Class:11
+2017-07-31 11:28:57,982 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT name FROM sysobjects WHERE xtype = 'U' ORDER BY name
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "Temp20140328_DBSS1200"。登录失败。
+用户 'sa' 登录失败。
+   在 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   在 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   在 System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   在 System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   在 System.Data.SqlClient.SqlConnection.Open()
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:e6cc7556-11c9-436e-b5d6-62fc123f1bca
+Error Number:4060,State:1,Class:11
+2017-07-31 11:29:54,145 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT COUNT(1) AS DtSourceCount FROM myParamValue Where 11111
+System.Data.SqlClient.SqlException (0x80131904): 在应使用条件的上下文(在 '11111' 附近)中指定了非布尔类型的表达式。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:1a4ab143-8b07-4ced-af00-f7fe577d0afc
+Error Number:4145,State:1,Class:15
+2017-07-31 11:29:54,149 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - SELECT TOP 3000 * FROM myParamValue Where 11111
+System.Data.SqlClient.SqlException (0x80131904): 在应使用条件的上下文(在 '11111' 附近)中指定了非布尔类型的表达式。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:1a4ab143-8b07-4ced-af00-f7fe577d0afc
+Error Number:4145,State:1,Class:15
+2017-07-31 11:30:54,897 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:56dc3a5a-c41a-44a0-98a3-9afd1b7be376
+Error Number:3201,State:2,Class:16
+2017-07-31 11:30:55,242 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:56dc3a5a-c41a-44a0-98a3-9afd1b7be376
+Error Number:5133,State:1,Class:16
+2017-07-31 11:31:40,309 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3e166bb0-8b8f-4610-b836-3f7523ce636e
+Error Number:3201,State:2,Class:16
+2017-07-31 11:31:40,338 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:3e166bb0-8b8f-4610-b836-3f7523ce636e
+Error Number:5133,State:1,Class:16
+2017-07-31 11:32:11,501 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3e166bb0-8b8f-4610-b836-3f7523ce636e
+Error Number:3201,State:2,Class:16
+2017-07-31 11:33:12,215 [T:7] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:3e166bb0-8b8f-4610-b836-3f7523ce636e
+Error Number:5133,State:1,Class:16
+2017-07-31 11:44:26,002 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:3f2185bf-311b-48a5-b62d-78744f3fb736
+Error Number:3201,State:2,Class:16
+2017-07-31 11:44:52,676 [T:30] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:448b7713-5707-4ffc-a16f-17b815e6f09a
+Error Number:5133,State:1,Class:16
+2017-07-31 11:45:15,163 [T:30] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:448b7713-5707-4ffc-a16f-17b815e6f09a
+Error Number:5133,State:1,Class:16
+2017-07-31 11:50:20,190 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:aa6e2add-5ab4-422b-a76c-be03944d6f9c
+Error Number:3201,State:2,Class:16
+2017-07-31 11:50:20,249 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:aa6e2add-5ab4-422b-a76c-be03944d6f9c
+Error Number:5133,State:1,Class:16
+2017-07-31 11:50:48,261 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:aa6e2add-5ab4-422b-a76c-be03944d6f9c
+Error Number:3201,State:2,Class:16
+2017-07-31 11:50:48,289 [T:5] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:aa6e2add-5ab4-422b-a76c-be03944d6f9c
+Error Number:5133,State:1,Class:16
+2017-07-31 11:50:50,868 [T:1] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:aa6e2add-5ab4-422b-a76c-be03944d6f9c
+Error Number:3201,State:2,Class:16
+2017-07-31 11:50:50,898 [T:6] [L:ERROR] [C:LogWriter.Error] [P:E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    ALTER DATABASE [dotNet_erp60_Lianjia] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotNet_erp60_Lianjia' )
+    DROP DATABASE [dotNet_erp60_Lianjia]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotNet_erp60_Lianjia] ON 
+
+( NAME = N'dotNet_erp60_Lianjia_Data',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotNet_erp60_Lianjia_Log',
+
+   FILENAME = N'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotNet_erp60_Lianjia]
+
+   FROM DISK = 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.mdf', 
+
+      MOVE '' TO 'E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotNet_erp60_Lianjia] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 对文件 "E:\MySoft\01Projects\Database\dotNet_erp60_Lianjia_Data.mdf" 的目录查找失败，出现操作系统错误 3(系统找不到指定的路径。)。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+无法打开备份设备 'E:\MySoft\01Projects\链家\数据库\备份\2017-07-25\dotNet_erp60_Lianjia.bak'。出现操作系统错误 3(系统找不到指定的路径。)。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotNet_erp60_Lianjia' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 E:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:2660270c-cd75-4a22-9da5-8195614b3f4b
+Error Number:5133,State:1,Class:16

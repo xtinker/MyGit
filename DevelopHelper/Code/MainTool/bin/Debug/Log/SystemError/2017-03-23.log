@@ -1,0 +1,106 @@
+2017-03-23 15:20:24,953 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.xmlToJson(String xml) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 109
+2017-03-23 15:20:33,989 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: <. Path 'root', line 6, position 24.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Converters.XmlNodeConverter.DeserializeNode(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, IXmlNode currentNode)
+   在 Newtonsoft.Json.Converters.XmlNodeConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
+   在 Newtonsoft.Json.JsonConvert.DeserializeXmlNode(String value, String deserializeRootElementName, Boolean writeArrayAttribute)
+   在 Newtonsoft.Json.JsonConvert.DeserializeXmlNode(String value)
+   在 View.StringFormatForm1.jsonToXml(String json) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 133
+2017-03-23 15:22:04,612 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.xmlToJson(String xml) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 109
+2017-03-23 15:22:09,180 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.formatXmlString(String str) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 182
+2017-03-23 15:28:59,564 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.xmlToJson(String xml) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 109
+2017-03-23 15:29:05,378 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.formatXmlString(String str) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 182
+2017-03-23 15:29:13,810 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+System.Xml.XmlException: 根级别上的数据无效。 第 1 行，位置 1。
+   在 System.Xml.XmlTextReaderImpl.Throw(Exception e)
+   在 System.Xml.XmlTextReaderImpl.Throw(String res, String arg)
+   在 System.Xml.XmlTextReaderImpl.ParseRootLevelWhitespace()
+   在 System.Xml.XmlTextReaderImpl.ParseDocumentContent()
+   在 System.Xml.XmlTextReaderImpl.Read()
+   在 System.Xml.XmlLoader.Load(XmlDocument doc, XmlReader reader, Boolean preserveWhitespace)
+   在 System.Xml.XmlDocument.Load(XmlReader reader)
+   在 System.Xml.XmlDocument.LoadXml(String xml)
+   在 View.StringFormatForm1.xmlToJson(String xml) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 109
+2017-03-23 15:29:25,357 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: <. Path '', line 0, position 0.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.ReadForType(JsonReader reader, JsonContract contract, Boolean hasConverter)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader)
+   在 View.StringFormatForm1.formatJsonString(String str) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 153
+2017-03-23 15:29:27,406 [T:1] [L:ERROR] [C:LogService.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\LogService.cs-36] - xmlToJson
+Newtonsoft.Json.JsonReaderException: Unexpected character encountered while parsing value: <. Path 'root', line 6, position 24.
+   在 Newtonsoft.Json.JsonTextReader.ParseValue()
+   在 Newtonsoft.Json.JsonTextReader.ReadInternal()
+   在 Newtonsoft.Json.JsonTextReader.Read()
+   在 Newtonsoft.Json.Converters.XmlNodeConverter.DeserializeNode(JsonReader reader, IXmlDocument document, XmlNamespaceManager manager, IXmlNode currentNode)
+   在 Newtonsoft.Json.Converters.XmlNodeConverter.ReadJson(JsonReader reader, Type objectType, Object existingValue, JsonSerializer serializer)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.DeserializeConvertable(JsonConverter converter, JsonReader reader, Type objectType, Object existingValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   在 Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   在 Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonConverter[] converters)
+   在 Newtonsoft.Json.JsonConvert.DeserializeXmlNode(String value, String deserializeRootElementName, Boolean writeArrayAttribute)
+   在 Newtonsoft.Json.JsonConvert.DeserializeXmlNode(String value)
+   在 View.StringFormatForm1.jsonToXml(String json) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\View\文本工具\去除换行\StringFormatForm1.cs:行号 133

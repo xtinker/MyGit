@@ -1,0 +1,8 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\bin\Debug\Common.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\bin\Debug\Common.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\bin\Debug\ChnCharInfo.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\bin\Debug\log4net.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\bin\Debug\log4net.xml
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\obj\Debug\Common.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\obj\Debug\Common.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

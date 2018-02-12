@@ -1,0 +1,11 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\obj\Debug\DbHelper.csprojResolveAssemblyReference.cache
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\DbHelper.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\DbHelper.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\Common.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\System.Data.OracleClient.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\log4net.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\ChnCharInfo.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\Common.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\bin\Debug\log4net.xml
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\obj\Debug\DbHelper.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\obj\Debug\DbHelper.pdb

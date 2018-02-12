@@ -1,0 +1,4 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Model\bin\Debug\Model.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Model\bin\Debug\Model.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Model\obj\Debug\Model.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Model\obj\Debug\Model.pdb

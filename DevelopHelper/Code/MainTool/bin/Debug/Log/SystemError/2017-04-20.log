@@ -1,0 +1,604 @@
+2017-04-20 11:47:55,733 [T:1] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='\\Wh-xiaoy03\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+System.Data.SqlClient.SqlException (0x80131904): 设备 '\\Wh-xiaoy03\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:7341071b-4546-4730-9a79-35d58285c259
+Error Number:3241,State:13,Class:16
+2017-04-20 11:47:58,497 [T:21] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    DROP DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] ON 
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+   FROM DISK = '\\Wh-xiaoy03\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.mdf', 
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 设备 '\\Wh-xiaoy03\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE DATABASE 正在异常终止。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:7341071b-4546-4730-9a79-35d58285c259
+Error Number:3241,State:13,Class:16
+2017-04-20 11:49:46,790 [T:1] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+System.Data.SqlClient.SqlException (0x80131904): 设备 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:7341071b-4546-4730-9a79-35d58285c259
+Error Number:3241,State:13,Class:16
+2017-04-20 11:49:47,713 [T:18] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    DROP DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] ON 
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+   FROM DISK = 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.mdf', 
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 无法创建文件 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data.mdf'，因为它已存在。请更改文件路径或文件名，然后重试此操作。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+设备 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+正在回滚不合法事务。估计回滚已完成: 100%。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:f3d269d9-9e02-4001-b52a-3f2863a39a08
+Error Number:5170,State:1,Class:16
+2017-04-20 11:55:26,160 [T:10] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+System.Data.SqlClient.SqlException (0x80131904): 设备 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:cf6c4656-91ea-4fe9-8c73-90515673e7b6
+Error Number:3241,State:13,Class:16
+2017-04-20 11:55:26,743 [T:12] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    DROP DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] ON 
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+   FROM DISK = 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.mdf', 
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 无法创建文件 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data.mdf'，因为它已存在。请更改文件路径或文件名，然后重试此操作。
+CREATE DATABASE 失败。无法创建列出的某些文件名。请查看相关错误。
+设备 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE DATABASE 正在异常终止。
+用户没有更改数据库 'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' 的权限，该数据库不存在，或数据库未处于允许访问检查的状态。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:2479deb8-1ccd-479a-8854-9433cb95c1a7
+Error Number:5170,State:1,Class:16
+2017-04-20 11:56:38,077 [T:10] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - RESTORE filelistonly from disk='D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+System.Data.SqlClient.SqlException (0x80131904): 设备 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE FILELIST 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   在 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   在 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   在 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   在 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   在 DbHelper.SqlServerHelper.ExecuteDataTable(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 341
+ClientConnectionId:cf6c4656-91ea-4fe9-8c73-90515673e7b6
+Error Number:3241,State:13,Class:16
+2017-04-20 11:56:38,594 [T:8] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10' )
+    DROP DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] ON 
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log',
+
+   FILENAME = N'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10]
+
+   FROM DISK = 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak'
+
+WITH  FILE = 1,
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.mdf', 
+
+      MOVE '' TO 'D:\MySoft\01Projects\Database\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 设备 'D:\MySoft\02Study\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_Branch10.bak' 上的介质簇的结构不正确。SQL Server 无法处理此介质簇。
+RESTORE DATABASE 正在异常终止。
+已将数据库上下文更改为 'master'。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:2479deb8-1ccd-479a-8854-9433cb95c1a7
+Error Number:3241,State:13,Class:16
+2017-04-20 14:05:13,891 [T:4] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy' )
+    ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy' )
+    DROP DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy] ON 
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Data',
+
+   FILENAME = N'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Log',
+
+   FILENAME = N'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy]
+
+   FROM DISK = '\\Wh-xiaoy03\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy.bak'
+
+WITH  FILE = 1,
+
+      MOVE 'myscrm_defaultorganization' TO 'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy.mdf', 
+
+      MOVE 'myscrm_defaultorganization_log' TO 'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 事务(进程 ID 52)与另一个进程被死锁在 锁 资源上，并且已被选作死锁牺牲品。请重新运行该事务。
+RESTORE DATABASE 正在异常终止。
+当数据库处于 Restoring 状态时，不允许 ALTER DATABASE。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+已处理百分之 10。
+已处理百分之 20。
+已处理百分之 30。
+已处理百分之 40。
+已处理百分之 50。
+已处理百分之 60。
+已处理百分之 70。
+已处理百分之 80。
+已处理百分之 90。
+已处理百分之 100。
+已为数据库 'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy'，文件 'myscrm_defaultorganization' (位于文件 1 上)处理了 206152 页。
+已为数据库 'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy'，文件 'myscrm_defaultorganization_log' (位于文件 1 上)处理了 1 页。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:9de5669a-4f7f-4009-b3d2-c0e908081c18
+Error Number:1205,State:51,Class:13
+2017-04-20 14:11:41,647 [T:4] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy' )
+    ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy' )
+    DROP DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy] ON 
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Data',
+
+   FILENAME = N'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Log',
+
+   FILENAME = N'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy]
+
+   FROM DISK = '\\Wh-xiaoy03\共享文件夹\雅居乐数据翻倍\翻倍库备份\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy.bak'
+
+WITH  FILE = 1,
+
+      MOVE 'myscrm_defaultorganization' TO 'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy.mdf', 
+
+      MOVE 'myscrm_defaultorganization_log' TO 'D:\测试数据库部署\中山公司\中山雅居乐60\dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): 当数据库处于 Restoring 状态时，不允许 ALTER DATABASE。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+已处理百分之 10。
+已处理百分之 20。
+已处理百分之 30。
+已处理百分之 40。
+已处理百分之 50。
+已处理百分之 60。
+已处理百分之 70。
+已处理百分之 80。
+已处理百分之 90。
+已处理百分之 100。
+已为数据库 'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy'，文件 'myscrm_defaultorganization' (位于文件 1 上)处理了 206152 页。
+已为数据库 'dotnet_erp60sp1_gzfjcszs_zsyjy_xiaoy'，文件 'myscrm_defaultorganization_log' (位于文件 1 上)处理了 1 页。
+RESTORE DATABASE 成功处理了 206153 页，花费 146.646 秒(10.982 MB/秒)。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:89789e4e-556e-4e7f-96a3-3ed454d995fc
+Error Number:5052,State:1,Class:16

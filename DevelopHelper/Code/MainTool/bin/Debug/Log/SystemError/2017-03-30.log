@@ -1,0 +1,96 @@
+2017-03-30 13:33:01,740 [T:1] [L:ERROR] [C:LogWriter.Error] [P:D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\Common\LogWriter.cs-36] - USE master
+
+--关闭数据库的引用
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp352' )
+    ALTER DATABASE [dotnet_erp352] SET OFFLINE WITH ROLLBACK IMMEDIATE;
+
+--如果要创建的数据库已经存在，那么删除它
+IF EXISTS ( SELECT  name
+            FROM    master.dbo.sysdatabases
+            WHERE   name = N'dotnet_erp352' )
+    DROP DATABASE [dotnet_erp352]
+
+--创建一个新数据库，要指定新建数据库的数据文件和日志文件的名称和位置，初始化大小增长幅度，最大值等内容
+
+CREATE DATABASE [dotnet_erp352] ON 
+
+( NAME = N'dotnet_erp352_Data',
+
+   FILENAME = N'C:\Mysoft\dotnet_erp352\dotnet_erp352_Data.mdf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 50MB,
+
+   FILEGROWTH = 5MB ) LOG ON
+
+( NAME = N'dotnet_erp352_Log',
+
+   FILENAME = N'C:\Mysoft\dotnet_erp352\dotnet_erp352_Log.ldf',
+
+   SIZE = 5MB,
+
+   MAXSIZE = 25MB,
+
+   FILEGROWTH = 5MB )
+
+--把指定的数据库备份文件恢复到刚刚建立的数据库里，这里要指定数据库备份文件的位置
+
+--以及要恢复到的数据库，因为备份文件来自未知的机器，备份的时候原数据库和新数据库
+
+--的数据文件和日志文件的位置不匹配，所以要用with move指令来完成强制文件移动，如果
+
+--是通过管理器备份的数据库文件，数据库文件和日志文件名分别是数据库名跟上_Data或
+
+--_Log，这是一个假设哦，如果不是这样，脚本有可能会出错
+
+RESTORE DATABASE [dotnet_erp352]
+
+   FROM DISK = '\\Wh-xiaoy03\共享文件夹\352测试库\2017-02-27 租售打通体验站点备份\dotnet_erp352.bak'
+
+WITH  FILE = 1,
+
+      MOVE 'dotnet_crm50sp1' TO 'C:\Mysoft\dotnet_erp352\dotnet_erp352.mdf', 
+
+      MOVE 'dotnet_crm50sp1_log' TO 'C:\Mysoft\dotnet_erp352\dotnet_erp352.ldf',
+
+      NOUNLOAD, 
+
+      REPLACE, 
+
+      STATS = 10
+
+--打开数据库的引用
+ALTER DATABASE [dotnet_erp352] set ONLINE;
+
+System.Data.SqlClient.SqlException (0x80131904): RESTORE 无法启动数据库 'dotnet_erp352'。
+RESTORE DATABASE 正在异常终止。
+ALTER DATABASE 语句失败。
+已将数据库上下文更改为 'master'。
+正在回滚不合法事务。估计回滚已完成: 100%。
+已处理百分之 10。
+已处理百分之 20。
+已处理百分之 30。
+已处理百分之 40。
+已处理百分之 50。
+已处理百分之 60。
+已处理百分之 70。
+已处理百分之 80。
+已处理百分之 90。
+已处理百分之 100。
+已为数据库 'dotnet_erp352'，文件 'dotnet_crm50sp1' (位于文件 1 上)处理了 39472 页。
+已为数据库 'dotnet_erp352'，文件 'dotnet_crm50sp1_log' (位于文件 1 上)处理了 4 页。
+无法检查数据库 "29" 中的挂起查询通知，因为在打开该数据库时出现以下错误: '查询通知订阅清除操作失败。有关详细信息，请参阅以前的错误消息。'。
+无法检查数据库 "29" 中的挂起查询通知，因为在打开该数据库时出现以下错误: ''。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 D:\MySoft\02Study\软件开发辅助工具\DevelopHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:8c3407b4-42f8-4ce8-82f6-1b3db03022fe
+Error Number:3167,State:1,Class:16

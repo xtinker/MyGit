@@ -1,0 +1,36 @@
+2016-12-07 10:51:02,354 [T:1] [L:ERROR] [C:LogWriter.Error] [P:d:\MySoft\02Study\软件开发辅助工具\MysoftHelper\Code\Base\Common\LogWriter.cs-36] - BACKUP DATABASE [dotnet_erp30_ZSDT-2] TO DISK = '\\Wh-xiaoy03\共享文件夹\352测试库\dotnet_erp30_ZSDT-2.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 '\\Wh-xiaoy03\共享文件夹\352测试库\dotnet_erp30_ZSDT-2.bak'。出现操作系统错误 1317(指定的帐户不存在。)。
+BACKUP DATABASE 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 d:\MySoft\02Study\软件开发辅助工具\MysoftHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:b998f9cf-cde2-4d70-8bbd-47017e9a09e3
+2016-12-07 10:55:51,353 [T:1] [L:ERROR] [C:LogWriter.Error] [P:d:\MySoft\02Study\软件开发辅助工具\MysoftHelper\Code\Base\Common\LogWriter.cs-36] - BACKUP DATABASE [dotnet_erp30_ZSDT-2] TO DISK = '\\Wh-xiaoy03\共享文件夹\352测试库\dotnet_erp30_ZSDT-2.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 '\\Wh-xiaoy03\共享文件夹\352测试库\dotnet_erp30_ZSDT-2.bak'。出现操作系统错误 1317(指定的帐户不存在。)。
+BACKUP DATABASE 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 d:\MySoft\02Study\软件开发辅助工具\MysoftHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:b998f9cf-cde2-4d70-8bbd-47017e9a09e3
+2016-12-07 11:01:15,736 [T:1] [L:ERROR] [C:LogWriter.Error] [P:d:\MySoft\02Study\软件开发辅助工具\MysoftHelper\Code\Base\Common\LogWriter.cs-36] - BACKUP DATABASE [dotnet_erp30_ZSDT-2] TO DISK = '\\Wh-xiaoy03\共享文件夹\352测试库\dotnet_erp30_ZSDT-2.bak'
+System.Data.SqlClient.SqlException (0x80131904): 无法打开备份设备 '\\Wh-xiaoy03\共享文件夹\352测试库\dotnet_erp30_ZSDT-2.bak'。出现操作系统错误 1317(指定的帐户不存在。)。
+BACKUP DATABASE 正在异常终止。
+   在 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   在 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   在 System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   在 System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout)
+   在 System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   在 System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   在 DbHelper.SqlServerHelper.ExecuteNonQuery(String cmdText) 位置 d:\MySoft\02Study\软件开发辅助工具\MysoftHelper\Code\Base\DbHelper\SqlServerHelper.cs:行号 88
+ClientConnectionId:9fd965e6-7e3a-42b3-b4f3-5dd15867ab00

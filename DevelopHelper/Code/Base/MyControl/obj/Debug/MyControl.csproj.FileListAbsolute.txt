@@ -1,0 +1,5 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\MyControl\bin\Debug\MyControl.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\MyControl\bin\Debug\MyControl.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\MyControl\obj\Debug\MyControl.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\MyControl\obj\Debug\MyControl.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\MyControl\obj\Debug\MyControl.csprojResolveAssemblyReference.cache

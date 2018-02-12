@@ -1,0 +1,7 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\bin\Debug\LogServer.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\bin\Debug\LogServer.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\bin\Debug\log4net.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\bin\Debug\log4net.xml
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\obj\Debug\LogServer.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\obj\Debug\LogServer.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\LogServer\obj\Debug\LogServer.csprojResolveAssemblyReference.cache

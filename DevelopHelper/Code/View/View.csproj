@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{119ACD97-8ED4-4E81-8E8E-E6E80D049FD4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>View</RootNamespace>
+    <AssemblyName>View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin4">
+      <HintPath>..\Resource\DLL\IrisSkin4.dll</HintPath>
+    </Reference>
+    <Reference Include="MyControl">
+      <HintPath>..\Base\MyControl\obj\Debug\MyControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Resource\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\Resource\DLL\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="WebKitBrowser">
+      <HintPath>..\Resource\WebKit.NET\bin\WebKitBrowser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoSizeFormClass.cs" />
+    <Compile Include="Cmd MarkDown\MarkDownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cmd MarkDown\MarkDownForm.Designer.cs">
+      <DependentUpon>MarkDownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\FlowDefForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\FlowDefForm.Designer.cs">
+      <DependentUpon>FlowDefForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\FlowScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\FlowScriptForm.Designer.cs">
+      <DependentUpon>FlowScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\TabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\TabForm.Designer.cs">
+      <DependentUpon>TabForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Goodway\Oracle\流程定义\Update.cs" />
+    <Compile Include="Goodway\SqlServer\流程定义\FlowScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Goodway\SqlServer\流程定义\FlowScriptForm.Designer.cs">
+      <DependentUpon>FlowScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OCR\OcrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OCR\OcrForm.Designer.cs">
+      <DependentUpon>OcrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlusForm.Designer.cs">
+      <DependentUpon>PlusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Post提交工具\PostSubmitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Post提交工具\PostSubmitForm.Designer.cs">
+      <DependentUpon>PostSubmitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetParentInfo.cs" />
+    <Compile Include="Skins\SkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skins\SkinForm.Designer.cs">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="二维码生成器\CodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="二维码生成器\CodeForm.Designer.cs">
+      <DependentUpon>CodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\AESForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\AESForm.Designer.cs">
+      <DependentUpon>AESForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\Base64Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\Base64Form.Designer.cs">
+      <DependentUpon>Base64Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\DES3Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\DES3Form.Designer.cs">
+      <DependentUpon>DES3Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\DESForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\DESForm.Designer.cs">
+      <DependentUpon>DESForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\MD5Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\MD5Form.Designer.cs">
+      <DependentUpon>MD5Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\MySoftForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\MySoftForm.Designer.cs">
+      <DependentUpon>MySoftForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="加密解密\SHA1Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="加密解密\SHA1Form.Designer.cs">
+      <DependentUpon>SHA1Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="命令行\CmdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="命令行\CmdForm.Designer.cs">
+      <DependentUpon>CmdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="命令行\MyCmdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="命令行\MyCmdForm.Designer.cs">
+      <DependentUpon>MyCmdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工作日志\WorkLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工作日志\WorkLogForm.Designer.cs">
+      <DependentUpon>WorkLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据库备份与还原\SqlServer\DbBakupAndRollBack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据库备份与还原\SqlServer\DbBakupAndRollBack.Designer.cs">
+      <DependentUpon>DbBakupAndRollBack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="文本工具\去除换行\StringFormatForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="文本工具\去除换行\StringFormatForm1.Designer.cs">
+      <DependentUpon>StringFormatForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="明源\元数据比对\CompareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="明源\元数据比对\CompareForm.Designer.cs">
+      <DependentUpon>CompareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="明源\后端服务生成前端脚本\CreateScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="明源\后端服务生成前端脚本\CreateScriptForm.Designer.cs">
+      <DependentUpon>CreateScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="明源\文档中心\MySoftBrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="明源\文档中心\MySoftBrowserForm.Designer.cs">
+      <DependentUpon>MySoftBrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="翻译助手\TranslateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="翻译助手\TranslateForm.Designer.cs">
+      <DependentUpon>TranslateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="脚本生成工具\Oracle\ConDbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="脚本生成工具\Oracle\ConDbForm.Designer.cs">
+      <DependentUpon>ConDbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="脚本生成工具\Oracle\ScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="脚本生成工具\Oracle\ScriptForm.Designer.cs">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="脚本生成工具\SqlServer\ConDbForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="脚本生成工具\SqlServer\ConDbForm.Designer.cs">
+      <DependentUpon>ConDbForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="脚本生成工具\SqlServer\ScriptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="脚本生成工具\SqlServer\ScriptForm.Designer.cs">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="解析器\ParserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="解析器\ParserForm.Designer.cs">
+      <DependentUpon>ParserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="进制转换\DataChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="进制转换\DataChange.Designer.cs">
+      <DependentUpon>DataChange.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cmd MarkDown\MarkDownForm.resx">
+      <DependentUpon>MarkDownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goodway\Oracle\流程定义\FlowDefForm.resx">
+      <DependentUpon>FlowDefForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goodway\Oracle\流程定义\FlowScriptForm.resx">
+      <DependentUpon>FlowScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goodway\Oracle\流程定义\TabForm.resx">
+      <DependentUpon>TabForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Goodway\SqlServer\流程定义\FlowScriptForm.resx">
+      <DependentUpon>FlowScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCR\OcrForm.resx">
+      <DependentUpon>OcrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlusForm.resx">
+      <DependentUpon>PlusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Post提交工具\PostSubmitForm.resx">
+      <DependentUpon>PostSubmitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Skins\SkinForm.resx">
+      <DependentUpon>SkinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="二维码生成器\CodeForm.resx">
+      <DependentUpon>CodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\AESForm.resx">
+      <DependentUpon>AESForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\Base64Form.resx">
+      <DependentUpon>Base64Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\DES3Form.resx">
+      <DependentUpon>DES3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\DESForm.resx">
+      <DependentUpon>DESForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\MD5Form.resx">
+      <DependentUpon>MD5Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\MySoftForm.resx">
+      <DependentUpon>MySoftForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="加密解密\SHA1Form.resx">
+      <DependentUpon>SHA1Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="命令行\CmdForm.resx">
+      <DependentUpon>CmdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="命令行\MyCmdForm.resx">
+      <DependentUpon>MyCmdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工作日志\WorkLogForm.resx">
+      <DependentUpon>WorkLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据库备份与还原\SqlServer\DbBakupAndRollBack.resx">
+      <DependentUpon>DbBakupAndRollBack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="文本工具\去除换行\StringFormatForm1.resx">
+      <DependentUpon>StringFormatForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="明源\元数据比对\CompareForm.resx">
+      <DependentUpon>CompareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="明源\后端服务生成前端脚本\CreateScriptForm.resx">
+      <DependentUpon>CreateScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="明源\文档中心\MySoftBrowserForm.resx">
+      <DependentUpon>MySoftBrowserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="翻译助手\TranslateForm.resx">
+      <DependentUpon>TranslateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="脚本生成工具\Oracle\ConDbForm.resx">
+      <DependentUpon>ConDbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="脚本生成工具\Oracle\ScriptForm.resx">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="脚本生成工具\SqlServer\ConDbForm.resx">
+      <DependentUpon>ConDbForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="脚本生成工具\SqlServer\ScriptForm.resx">
+      <DependentUpon>ScriptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="解析器\ParserForm.resx">
+      <DependentUpon>ParserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进制转换\DataChange.resx">
+      <DependentUpon>DataChange.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Common\Common.csproj">
+      <Project>{96b85d02-5122-4ac9-ad0b-ee0972c318f8}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\ConfigHelper\ConfigHelper.csproj">
+      <Project>{caba070e-be8e-4014-991f-5dd8dae21dfd}</Project>
+      <Name>ConfigHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\DbHelper\DbHelper.csproj">
+      <Project>{cdff41be-d614-4f49-b39f-0b264e429f01}</Project>
+      <Name>DbHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\LogServer\LogServer.csproj">
+      <Project>{350e9207-3bf2-4b38-9aa5-fcbc46875895}</Project>
+      <Name>LogServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\EncryptType\EncryptType.csproj">
+      <Project>{6c8868ec-993b-4895-93a7-15de1b7a43df}</Project>
+      <Name>EncryptType</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\ImageOCR\ImageOCR.csproj">
+      <Project>{a0a27c11-f4bf-4fe8-9f58-5d669dabfbcd}</Project>
+      <Name>ImageOCR</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{d7e7af6c-643c-45ab-9fff-20a492d04a9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="解析器\JSON解析器\" />
+    <Folder Include="解析器\XML解析器\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

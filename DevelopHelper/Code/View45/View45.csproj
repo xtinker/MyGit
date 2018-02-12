@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{862866AA-4E1B-41B9-821B-75ECE3048C18}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>View45</RootNamespace>
+    <AssemblyName>View45</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mysoft.Map6.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f5b8a9315ee7ce2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\Mysoft.Map6.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Mysoft.Map6.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f5b8a9315ee7ce2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\Mysoft.Map6.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="导出枚举工具\EnumExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="导出枚举工具\EnumExportForm.Designer.cs">
+      <DependentUpon>EnumExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="导出枚举工具\EnumInfo.cs" />
+    <Compile Include="导出枚举工具\EnumObject.cs" />
+    <Compile Include="导出枚举工具\LanguageResource.cs" />
+    <Compile Include="导出枚举工具\Search.cs" />
+    <Compile Include="导出枚举工具\SearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="导出枚举工具\SearchForm.Designer.cs">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="导出枚举工具\StringResource.cs" />
+    <Compile Include="数据升级比较\TableCompareForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据升级比较\TableCompareForm.Designer.cs">
+      <DependentUpon>TableCompareForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据字典\DataDictForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据字典\DataDictForm.Designer.cs">
+      <DependentUpon>DataDictForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="导出枚举工具\EnumExportForm.resx">
+      <DependentUpon>EnumExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="导出枚举工具\SearchForm.resx">
+      <DependentUpon>SearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据升级比较\TableCompareForm.resx">
+      <DependentUpon>TableCompareForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据字典\DataDictForm.resx">
+      <DependentUpon>DataDictForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Base\DbHelper\DbHelper.csproj">
+      <Project>{cdff41be-d614-4f49-b39f-0b264e429f01}</Project>
+      <Name>DbHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{d7e7af6c-643c-45ab-9fff-20a492d04a9e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

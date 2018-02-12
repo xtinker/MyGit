@@ -1,0 +1,5 @@
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\ConfigHelper\bin\Debug\ConfigHelper.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\ConfigHelper\bin\Debug\ConfigHelper.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\ConfigHelper\obj\Debug\ConfigHelper.dll
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\ConfigHelper\obj\Debug\ConfigHelper.pdb
+E:\02Study\软件开发辅助工具\DevelopHelper\Code\Base\ConfigHelper\obj\Debug\ConfigHelper.csprojResolveAssemblyReference.cache
